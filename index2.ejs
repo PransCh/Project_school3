@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My app</title>
+    <style>
+        .topic {
+            font-size: 50px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+        <center>
+            <nav>
+                <a href="/">Monuments</a>
+                <a href="/resort1" class="topic">Resorts</a>
+                <a href="/museums1">Museums</a>
+            </nav>
+        </center>
+        <br>
+        <center>
+                        <th style="width: 20%">RESORTS NAMES</th>
+                        <th style="width: 20%">RESORTS ID </th>
+                        <th style="width: 50%">LOCATION </th>
+                        <th style="width: 10%">FEE </th>
+                        <br>
+                        <br>
+                    <% for(var i=0; i < resorts.length; i++) {%>
+                        <tr style="text-align: center">
+                            <td>
+                                <%= resorts[i].Name %>
+                            </td>
+                            <td>
+                                <%= resorts[i].Id %>
+                            </td>
+                            <td>
+                                <%= resorts[i].Location %>
+                            </td>
+                            <td>
+                                <%= resorts[i].Fee %>
+                            </td>
+                        </tr>
+                        <br>
+                        <% } %>
+
+        </center>
+</body>
+
+</html>
